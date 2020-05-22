@@ -1,7 +1,7 @@
 package ar.steps;
 
 import api.config.EntityConfiguration;
-import api.model.Data;
+import api.model.User;
 import com.crowdar.api.rest.APIManager;
 import com.crowdar.core.PageSteps;
 import com.google.api.client.repackaged.com.google.common.base.Splitter;
@@ -12,7 +12,6 @@ import org.apache.commons.lang.StringUtils;
 import org.testng.Assert;
 
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Map;
 
 public class UserSteps extends PageSteps {
@@ -46,8 +45,9 @@ public class UserSteps extends PageSteps {
     @And("^The proper '(.*)' '(.*)' returned in the response$")
     public void theProperIdReturnedInTheResponse(String property, String value) {
         if (!value.isEmpty()) {
-            Data response = (Data) APIManager.getLastResponse().getResponse();
-            Assert.assertEquals(String.valueOf(response.getUser().getUserId()), value, "The " + property + " is not in the response");
+
+            User response = (User) APIManager.getLastResponse().getResponse();
+            Assert.assertEquals(String.valueOf(response.getId()), value, "The " + property + " is not in the response");
 
         }
     }

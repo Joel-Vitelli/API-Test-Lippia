@@ -10,8 +10,8 @@ public class User {
     private int id;
     @JsonProperty("title")
     private String title;
-    @JsonProperty("completes")
-    private boolean completes;
+    @JsonProperty("body")
+    private String body;
 
     public int getUserId() {
         return userId;
@@ -20,16 +20,13 @@ public class User {
         return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public String getTitle() {
         return title;
     }
+
+    public String getCompletes() {
+        return body;
+    }
+
 
 }

@@ -1,0 +1,11 @@
+{
+  "url": "https://jsonplaceholder.typicode.com/posts",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "title": "automation test",
+    "body": "dante joel",
+    "userId": 3
+  }
+}

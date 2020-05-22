@@ -10,4 +10,5 @@ Feature: Api example
     Examples:
       | jsonName    | statusCode | id | operation | entity |
       | exampleGET  | 200        | 1  | GET       | USER   |
+      | examplePOST | 201        |    | POST      | USER   |
 
