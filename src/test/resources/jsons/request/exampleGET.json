@@ -1,0 +1,10 @@
+{
+  "url": "https://jsonplaceholder.typicode.com/todos/1",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "urlParameters": {
+    "id": "1"
+  }
+}
+
